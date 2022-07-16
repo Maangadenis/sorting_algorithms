@@ -1,24 +1,18 @@
 #include "sort.h"
+
 /**
-* bubble_sort - sort an int array with bubble_sort
-* @array: array of integers of size
-* @size: the size of the array
-*/
+ * bubble_sort - a function to sort an array
+ * @array: integer array to be sorted
+ * @size: size of the array
+ */
+
 void bubble_sort(int *array, size_t size)
 {
-	/* declarations */
-	int temp;
 	size_t i, j;
+	int temp;
 
-	/* check for array & size */
-	if (!(array && size))
-		return;
-
-	/* sort */
-	for (i = 0; i < size;)
-	{
+	for (i = 0; i < size; i++)
 		for (j = 0; j < size - 1; j++)
-		{
 			if (array[j] > array[j + 1])
 			{
 				temp = array[j];
@@ -26,7 +20,4 @@ void bubble_sort(int *array, size_t size)
 				array[j + 1] = temp;
 				print_array(array, size);
 			}
-		}
-		i++;
-	}
 }
